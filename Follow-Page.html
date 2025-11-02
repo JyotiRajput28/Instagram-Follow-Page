@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>instagram follow page </title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        background:rgb(252, 178, 190);;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        
+    }
+    .main{
+        height: 500px;
+        width: 500px;
+        background-color:#fff;
+        border-radius: 10px;
+        margin-top: 100px;
+        border: 5px solid black;
+        text-align: center;
+    }
+    .main img{
+        width: 60%;
+        height:50%;
+        object-fit: cover;
+        border-radius: 5px;
+        object-position: center;
+        margin-left: 10px;
+        margin-top: 20px;
+        border: 5px solid black;
+    }
+     .btn {
+        font-size: 20px;
+        background-color: rgb(153, 101, 111);
+        margin-top: 20px;
+        border-radius: 5px;
+        box-shadow: 2px 3px;
+        padding: 5px;
+        
+    }
+    .main h2,h3{
+        margin-top: 10px;
+        font-size: 30px;
+    }
+</style>
+<body>
+     <div class="main">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlZnE98BJIb3BStFXLWoQ0CKS52fuU_iCgoPxkp_ayL-jGgvVq5O-CDjWrB684gwxQDVc&usqp=CAU" alt="img-1">
+        <h2>Kim Taehyung(V)</h2>
+        <h3>follow</h3>
+        <button class="btn">Add friend</button>
+    </div>
+    <script>
+        let h3 = document.querySelector("h3")
+        var btn = document.querySelector(".btn")
+        var main =document.querySelector(".main")
+        var count = 0;
+        btn.addEventListener("click",function(){
+            if(count == 0){
+                h3.innerText="following"
+                h3.style.color="green"
+                btn.innerText="Remove "
+                count = 1
+            }else{
+                h3.innerText="follow"
+                h3.style.color="red"
+                btn.innerText="Add friend"
+                count = 0
+            }
+            
+        });        
+    </script>
+</body>
+</html>
